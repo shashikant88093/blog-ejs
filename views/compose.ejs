@@ -1,8 +1,15 @@
 
     <%- include('./partials/header'); -%>
     <h1> Compose</h1>
+   
     <form action="/compose" method="post">
-    <input placeholder="compose" name="post"/> <button type="sumbit" name="button" >Publish</button>
+        <label>Title</label>
+    <input placeholder="compose" name="postTitle" /> 
+    <br>
+    <br>
+    <textarea name="postDescription"></textarea>
+    <button type="sumbit"  >Publish</button>
+   
     </form>
     <%- include('./partials/footer'); -%>
 

@@ -1,8 +1,13 @@
 
 
     <%- include('./partials/header'); -%>
-    <h1> Home</h1>
-    <p><%= homepage %></p>  
+   
+    <% for (let i=0;i<listData?.length;i++){ %>
+        <h1><%= listData[i].title %> </h1>
+        <p><%= listData[i]?.postDescription.substring(0,100) + " ..." %>
+            <a href="/posts/<%=listData[i].title%>">Read More</a></p>  
+
+        <% } %>
     <%- include('./partials/footer'); -%>
 
 
